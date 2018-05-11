@@ -13,7 +13,7 @@ RUN apk upgrade -U \
   && apk add \
     bash \
     curl \
-    tzdate \
+    tzdata \
   && rm -rf /tmp/* \
   && rm -rf /var/cache/apk/*
 
