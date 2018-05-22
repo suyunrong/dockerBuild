@@ -1,4 +1,4 @@
-FROM alpine:3.7
+FROM centos:6.9
 LABEL authors=suyunrong
 
 #=======================================
@@ -9,15 +9,13 @@ ENV LANG C.UTF-8
 #=======================================
 # Install base package
 #=======================================
-RUN apk upgrade -U \
-  && apk add \
-    bash \
-    curl \
+RUN yum install update -y \
+  && yum install curl \
     unzip \
     tzdata \
     openssh-server \
   && rm -rf /tmp/* \
-  && rm -rf /var/cache/apk/*
+  && yum clean all
 
 #=======================================
 # Set timezone
