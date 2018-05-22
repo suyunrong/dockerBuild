@@ -9,8 +9,7 @@ ENV LANG C.UTF-8
 #=======================================
 # Install base package
 #=======================================
-RUN yum install update -y \
-  && yum install curl \
+RUN yum install -y curl \
     unzip \
     tzdata \
     openssh-server \
