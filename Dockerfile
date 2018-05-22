@@ -39,8 +39,8 @@ RUN mkdir /var/run/sshd \
 # Tomcat config
 # http://mirrors.hust.edu.cn/apache/tomcat/tomcat-8/v8.0.51/bin/apache-tomcat-8.0.51.tar.gz
 #========================================
-ARG VERSION "v7.0.88"
-ARG TOMCAT_VERSION "apache-tomcat-7.0.88"
+ENV VERSION "v7.0.88"
+ENV TOMCAT_VERSION "apache-tomcat-7.0.88"
 RUN curl -o /tmp/$TOMCAT_VERSION http://mirrors.hust.edu.cn/apache/tomcat/tomcat-7/$VERSION/bin/$TOMCAT_VERSION.tar.gz \
  && mkdir -p /www/tomcat/ \
  && tar -xzvf /tmp/$TOMCAT_VERSION.tar.gz -C /www/tomcat/ \
